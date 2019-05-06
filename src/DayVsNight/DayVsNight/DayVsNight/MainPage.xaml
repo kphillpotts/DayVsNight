@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DayVsNight.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:circleimge="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:local="clr-namespace:DayVsNight"
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image
+            Grid.RowSpan="2"
+            Aspect="AspectFill"
+            Source="Background" />
+        <StackLayout Padding="20,30,20,0">
+
+            <!--  Header Section  -->
+            <Grid Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="AUTO" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout>
+                    <Label Style="{StaticResource Header}" Text="Dashboard" />
+                    <Label>
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Style="{StaticResource SubText}" Text="Welcome home, " />
+                                <Span Style="{StaticResource SubTextSemiBold}" Text="David" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+                <circleimge:CircleImage
+                    Grid.Column="1"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Source="Profile"
+                    VerticalOptions="Center"
+                    WidthRequest="50" />
+            </Grid>
+
+            <!--  Top events alert  -->
+            <Frame
+                Margin="0,20,0,0"
+                Padding="10"
+                BackgroundColor="Transparent"
+                BorderColor="{StaticResource BorderColor}"
+                CornerRadius="20"
+                HasShadow="False">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Image
+                        Margin="10,0,0,0"
+                        HorizontalOptions="Center"
+                        Source="Lightning"
+                        VerticalOptions="Center" />
+                    <Label
+                        Grid.Column="1"
+                        Margin="20,0,0,0"
+                        Style="{StaticResource SubTextSemiBold}"
+                        Text="2 Unchecked Events" />
+                    <Image
+                        Grid.Column="2"
+                        Margin="0,0,10,0"
+                        HorizontalOptions="Center"
+                        Source="Arrow"
+                        VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+
+            <Label Style="{StaticResource SubHeader}" Text="Temperature" />
+
+            <!--  Temp Guage  -->
+            <Grid>
+
+
+                <pancake:PancakeView CornerRadius="10" IsClippedToBounds="False">
+                    <Grid>
+                        <Image Aspect="AspectFill" Source="TempGuage" />
+                        <StackLayout Margin="20,5,0,0">
+                            <Label Style="{StaticResource TempLabel}" Text="23˚" />
+                            <Label
+                                Margin="0,-15,0,0"
+                                Style="{StaticResource SubTextSemiBold}"
+                                Text="CELCIUS"
+                                TextColor="White" />
+                        </StackLayout>
+                        <Label
+                            Margin="0,10,20,0"
+                            HorizontalOptions="End"
+                            Style="{StaticResource SubTextSemiBold}"
+                            Text="◦◦◦"
+                            TextColor="White" />
+
+                    </Grid>
+                </pancake:PancakeView>
+                <Image
+                    HorizontalOptions="Start"
+                    Source="Thumb"
+                    TranslationX="150"
+                    TranslationY="30"
+                    VerticalOptions="End" />
+            </Grid>
+            <!--  Security  -->
+            <Label Style="{StaticResource SubHeader}" Text="Security" />
+
+            <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <!--  room  -->
+                    <pancake:PancakeView CornerRadius="10">
+                        <Grid
+                            BackgroundColor="Red"
+                            HeightRequest="100"
+                            WidthRequest="150">
+                            <Image Aspect="AspectFill" Source="Room1" />
+                            <Frame
+                                Margin="5"
+                                Padding="10,5"
+                                BackgroundColor="{StaticResource TagColor}"
+                                CornerRadius="15"
+                                HasShadow="False"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start">
+                                <Label Style="{StaticResource TagLabel}" Text="Zone 1" />
+                            </Frame>
+                        </Grid>
+                    </pancake:PancakeView>
+                    <pancake:PancakeView CornerRadius="10">
+                        <Grid
+                            BackgroundColor="Red"
+                            HeightRequest="100"
+                            WidthRequest="150">
+                            <Image Aspect="AspectFill" Source="Room2" />
+                            <Frame
+                                Margin="5"
+                                Padding="10,5"
+                                BackgroundColor="{StaticResource TagColor}"
+                                CornerRadius="15"
+                                HasShadow="False"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start">
+                                <Label Style="{StaticResource TagLabel}" Text="Zone 2" />
+                            </Frame>
+                        </Grid>
+                    </pancake:PancakeView>
+                    <pancake:PancakeView CornerRadius="10">
+                        <Grid
+                            BackgroundColor="Red"
+                            HeightRequest="100"
+                            WidthRequest="150">
+                            <Image Aspect="AspectFill" Source="Room3" />
+                            <Frame
+                                Margin="5"
+                                Padding="10,5"
+                                BackgroundColor="{StaticResource TagColor}"
+                                CornerRadius="15"
+                                HasShadow="False"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start">
+                                <Label Style="{StaticResource TagLabel}" Text="Zone 3" />
+                            </Frame>
+                        </Grid>
+                    </pancake:PancakeView>
+
+
+                </StackLayout>
+            </ScrollView>
+
+        </StackLayout>
+
+        <!--  bottom tab layout  -->
+        <ScrollView
+            Grid.Row="1"
+            Margin="20,20,20,40"
+            HorizontalScrollBarVisibility="Never"
+            Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" Spacing="20">
+                <StackLayout Orientation="Vertical">
+                    <BoxView
+                        BackgroundColor="White"
+                        HeightRequest="2"
+                        WidthRequest="130" />
+                    <Label Style="{StaticResource TabHeader}" Text="Kitchen" />
+                    <Label
+                        Margin="0,-5,0,0"
+                        Style="{StaticResource SubText}"
+                        Text="5 Active Devices"
+                        TextColor="White" />
+                </StackLayout>
+
+
+                <StackLayout Orientation="Vertical">
+                    <BoxView
+                        BackgroundColor="{StaticResource TabSubTextColor}"
+                        HeightRequest="1"
+                        WidthRequest="100" />
+                    <Label
+                        Style="{StaticResource TabHeader}"
+                        Text="Study"
+                        TextColor="{StaticResource TabSubTextColor}" />
+                    <Label
+                        Margin="0,-5,0,0"
+                        Style="{StaticResource TabSubText}"
+                        Text="5 Active Devices"
+                        TextColor="{StaticResource TabSubTextColor}" />
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical">
+                    <BoxView
+                        BackgroundColor="{StaticResource TabSubTextColor}"
+                        HeightRequest="1"
+                        WidthRequest="100" />
+                    <Label
+                        Style="{StaticResource TabHeader}"
+                        Text="Bed Room"
+                        TextColor="{StaticResource TabSubTextColor}" />
+                    <Label
+                        Margin="0,-5,0,0"
+                        Style="{StaticResource TabSubText}"
+                        Text="5 Active Devices"
+                        TextColor="{StaticResource TabSubTextColor}" />
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>
