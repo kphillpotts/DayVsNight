@@ -85,35 +85,24 @@
             <Label Style="{StaticResource SubHeader}" Text="Temperature" />
 
             <!--  Temp Guage  -->
-            <Grid>
+            <Grid HeightRequest="170">
 
+                <local:GaugeControl />
 
-                <pancake:PancakeView CornerRadius="10" IsClippedToBounds="False">
-                    <Grid>
-                        <Image Aspect="AspectFill" Source="TempGuage" />
-                        <StackLayout Margin="20,5,0,0">
-                            <Label Style="{StaticResource TempLabel}" Text="23˚" />
-                            <Label
-                                Margin="0,-15,0,0"
-                                Style="{StaticResource SubTextSemiBold}"
-                                Text="CELCIUS"
-                                TextColor="White" />
-                        </StackLayout>
-                        <Label
-                            Margin="0,10,20,0"
-                            HorizontalOptions="End"
-                            Style="{StaticResource SubTextSemiBold}"
-                            Text="◦◦◦"
-                            TextColor="White" />
-
-                    </Grid>
-                </pancake:PancakeView>
-                <Image
-                    HorizontalOptions="Start"
-                    Source="Thumb"
-                    TranslationX="150"
-                    TranslationY="30"
-                    VerticalOptions="End" />
+                <StackLayout Margin="20,5,0,0" InputTransparent="True">
+                    <Label Style="{StaticResource TempLabel}" Text="23˚" />
+                    <Label
+                        Margin="0,-15,0,0"
+                        Style="{StaticResource SubTextSemiBold}"
+                        Text="CELCIUS"
+                        TextColor="White" />
+                </StackLayout>
+                <Label
+                    Margin="0,10,20,0"
+                    HorizontalOptions="End"
+                    Style="{StaticResource SubTextSemiBold}"
+                    Text="◦◦◦"
+                    TextColor="White" />
             </Grid>
             <!--  Security  -->
             <Label Style="{StaticResource SubHeader}" Text="Security" />

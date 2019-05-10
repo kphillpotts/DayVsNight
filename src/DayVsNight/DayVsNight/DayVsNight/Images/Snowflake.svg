@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.656" height="35.762" viewBox="0 0 35.656 35.762">
+  <g id="Snowflake" transform="translate(-38.32 -331)" opacity="0.35">
+    <g id="Group_1" data-name="Group 1" transform="translate(0 -0.83)">
+      <path id="Path_3" data-name="Path 3" d="M550.427,332.83V349.5h16.55" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <path id="Path_6" data-name="Path 6" d="M555.453,335.037l-4.974,4.974" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <g id="Group_2" data-name="Group 2">
+        <path id="Path_5" data-name="Path 5" d="M561.613,337.734,550.436,348.91" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <path id="Path_7" data-name="Path 7" d="M70.477,344.458l-5.135,5.135" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Group_3" data-name="Group 3" transform="translate(-293.51 405.083) rotate(-90)">
+      <path id="Path_3-2" data-name="Path 3" d="M550.427,332.83V349.5h16.55" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <path id="Path_6-2" data-name="Path 6" d="M555.453,335.037l-4.974,4.974" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <g id="Group_2-2" data-name="Group 2">
+        <path id="Path_5-2" data-name="Path 5" d="M561.613,337.734,550.436,348.91" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <path id="Path_7-2" data-name="Path 7" d="M70.477,344.458l-5.135,5.135" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Group_4" data-name="Group 4" transform="translate(112.296 698.593) rotate(180)">
+      <path id="Path_3-3" data-name="Path 3" d="M550.427,332.83V349.5h16.55" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <path id="Path_6-3" data-name="Path 6" d="M555.453,335.037l-4.974,4.974" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <g id="Group_2-3" data-name="Group 2">
+        <path id="Path_5-3" data-name="Path 5" d="M561.613,337.734,550.436,348.91" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <path id="Path_7-3" data-name="Path 7" d="M70.477,344.458l-5.135,5.135" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="Group_5" data-name="Group 5" transform="translate(405.806 292.68) rotate(90)">
+      <path id="Path_3-4" data-name="Path 3" d="M550.427,332.83V349.5h16.55" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <path id="Path_6-4" data-name="Path 6" d="M555.453,335.037l-4.974,4.974" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      <g id="Group_2-4" data-name="Group 2">
+        <path id="Path_5-4" data-name="Path 5" d="M561.613,337.734,550.436,348.91" transform="translate(-494)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+        <path id="Path_7-4" data-name="Path 7" d="M70.477,344.458l-5.135,5.135" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

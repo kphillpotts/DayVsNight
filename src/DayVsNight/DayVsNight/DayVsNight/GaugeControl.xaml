@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="DayVsNight.GaugeControl"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DayVsNight"
+    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms">
+    <ContentView.Content>
+
+        <Grid>
+            <skia:SKCanvasView x:Name="TempGaugeCanvas" PaintSurface="TempGaugeCanvas_PaintSurface" />
+            <Grid.Effects>
+                <local:TouchEffect Capture="True" TouchAction="TouchEffect_TouchAction" />
+            </Grid.Effects>
+        </Grid>
+
+    </ContentView.Content>
+</ContentView>

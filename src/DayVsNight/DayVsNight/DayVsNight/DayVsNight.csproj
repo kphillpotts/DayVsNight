@@ -11,10 +11,49 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Heat.svg" />
+    <None Remove="Images\Snowflake.svg" />
+    <None Remove="Images\Thumb.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\Heat.svg" />
+    <EmbeddedResource Include="Images\Snowflake.svg" />
+    <EmbeddedResource Include="Images\Thumb.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="LiveXAML" Version="2.1.72" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Svg" Version="1.60.0" />
+    <PackageReference Include="SkiaSharp.Views.Forms" Version="1.68.0" />
     <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="1.0.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="GaugeControl.xaml.cs">
+      <DependentUpon>GaugeControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="GaugeControl.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="GaugeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <None Update="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 </Project>
