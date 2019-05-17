@@ -228,4 +228,22 @@
   <ItemGroup>
     <BundleResource Include="Resources\Thumb%403x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mountain_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mountain_dark%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mountain_dark%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mountain_light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mountain_light%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\mountain_light%403x.png" />
+  </ItemGroup>
 </Project>

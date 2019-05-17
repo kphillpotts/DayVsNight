@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DayVsNight.Themes.DarkTheme">
+
+    <!-- Background Image -->
+    <x:String x:Key="MountainImage">mountain_dark</x:String>
+
+    <Color x:Key="HeaderColor">#FFFFFF</Color>
+    <Color x:Key="ArrowColor">#768ea0</Color>
+    <Color x:Key="BorderColor">#d2d7dd</Color>
+    <Color x:Key="TagColor">#ffa318</Color>
+    <Color x:Key="TabSubTextColor">#FFFFFF</Color>
+    <Color x:Key="SubTextColor">#FFFFFF</Color>
+    <Color x:Key="TempLabelColor">#ffffff</Color>
+
+    <!--BackgroundGradients-->
+    <Color x:Key="BackgroundGradientStartColor">#E8D6CB</Color>
+    <Color x:Key="BackgroundGradientMidColor">#6683A9</Color>
+    <Color x:Key="BackgroundGradientEndColor">#192E4A</Color>
+    <!--Guage Gradients-->
+    <Color x:Key="GaugeGradientStartColor">#7A89B1</Color>
+    <Color x:Key="GaugeGradientEndColor">#FB7D80</Color>
+
+</ResourceDictionary>

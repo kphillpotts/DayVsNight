@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:circleimge="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
     xmlns:local="clr-namespace:DayVsNight"
-    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
+    xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+    xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms">
 
     <Grid>
 
@@ -14,10 +15,20 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
+        <skia:SKCanvasView
+            x:Name="BackgroundGradient"
+            Grid.RowSpan="2"
+            HorizontalOptions="Fill"
+            PaintSurface="BackgroundGradient_PaintSurface"
+            VerticalOptions="Fill" />
+
         <Image
             Grid.RowSpan="2"
             Aspect="AspectFill"
-            Source="Background" />
+            HorizontalOptions="Fill"
+            Source="{DynamicResource MountainImage}"
+            VerticalOptions="End" />
+
         <StackLayout Padding="20,30,20,0">
 
             <!--  Header Section  -->
@@ -40,12 +51,17 @@
                 </StackLayout>
 
                 <circleimge:CircleImage
+                    x:Name="ProfileImge"
                     Grid.Column="1"
                     HeightRequest="50"
                     HorizontalOptions="Center"
                     Source="Profile"
                     VerticalOptions="Center"
-                    WidthRequest="50" />
+                    WidthRequest="50">
+                    <circleimge:CircleImage.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ProfileImage_Tapped" />
+                    </circleimge:CircleImage.GestureRecognizers>
+                </circleimge:CircleImage>
             </Grid>
 
             <!--  Top events alert  -->
@@ -105,7 +121,10 @@
                     TextColor="White" />
             </Grid>
             <!--  Security  -->
-            <Label Style="{StaticResource SubHeader}" Text="Security" />
+            <Label
+                Margin="0"
+                Style="{StaticResource SubHeader}"
+                Text="Security" />
 
             <ScrollView HorizontalScrollBarVisibility="Never" Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal">

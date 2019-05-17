@@ -1,4 +1,5 @@
-﻿using SkiaSharp;
+﻿using DayVsNight.Themes;
+using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,13 @@ namespace DayVsNight
         {
             InitializeComponent();
             Percent = 50;
+            MessagingCenter.Subscribe<ThemeMessage>(this, ThemeMessage.ThemeChanged, (tm) => UpdateTheme(tm));
+
+        }
+
+        private void UpdateTheme(ThemeMessage tm)
+        {
+            TempGaugeCanvas.InvalidateSurface();
         }
 
         public double Percent
@@ -58,20 +66,21 @@ namespace DayVsNight
             SKSurface surface = e.Surface;
             SKCanvas canvas = surface.Canvas;
 
-
-
             canvas.Clear();
 
             // get density
             float density = info.Size.Width / (float)this.Width;
 
             var scaledClipPath = new SKPath(clipPath);
-
             scaledClipPath.Transform(SKMatrix.MakeScale(density, density));
             scaledClipPath.GetTightBounds(out var tightBounds);
 
             // position it
             var xPos = info.Width * ((float)percent / 100);
+
+            // provide a clamp 
+            xPos = Math.Min(Math.Max(xPos, 100), info.Width-100);
+
             var translateX = (xPos - tightBounds.MidX);
             var translateY = info.Height - (tightBounds.Height + bottomPadding);
 
@@ -82,11 +91,17 @@ namespace DayVsNight
                 canvas.ClipPath(scaledClipPath, SKClipOperation.Difference, true);
                 canvas.Translate(-translateX, -translateY);
 
+                // get the theme colors
+
+                // get the brush based on the theme
+                SKColor gradientStart = ((Color)Application.Current.Resources["GaugeGradientStartColor"]).ToSKColor();
+                SKColor gradientEnd = ((Color)Application.Current.Resources["GaugeGradientEndColor"]).ToSKColor();
+
                 // gradient backround
                 backgroundBrush.Shader = SKShader.CreateLinearGradient(
                                               new SKPoint(0, 0),
                                               new SKPoint(info.Width, info.Height),
-                                              new SKColor[] { Color.FromHex("98C1FF").ToSKColor(), Color.FromHex("FC7C7E").ToSKColor() },
+                                              new SKColor[] { gradientStart, gradientEnd },
                                               new float[] { 0, 1 },
                                               SKShaderTileMode.Clamp);
                 SKRect backgroundBounds = new SKRect(0, 0, info.Width, info.Height - bottomPadding);
@@ -119,7 +134,7 @@ namespace DayVsNight
             var numTicks = 15;
             var distance = info.Width / numTicks;
             var tickHeight = 50;
-            for (int i = 0; i < numTicks; i++)
+            for (int i = 1; i < numTicks; i++)
             {
                 var start = new SKPoint(i * distance, info.Height - bottomPadding);
                 var end = new SKPoint(i * distance, info.Height - (tickHeight + bottomPadding));
