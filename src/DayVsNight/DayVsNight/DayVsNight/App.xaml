@@ -29,17 +29,17 @@
         <!--  Fonts  -->
         <OnPlatform x:Key="TextBold" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Poppins" />
-            <On Platform="Android" Value="OldStandard-Bold.ttf#Old Standard TT" />
+            <On Platform="Android" Value="Poppins-Bold.ttf#Poppins" />
         </OnPlatform>
 
         <OnPlatform x:Key="TextLight" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Poppins Light" />
-            <On Platform="Android" Value="OldStandard-Bold.ttf#Old Standard TT" />
+            <On Platform="Android" Value="Poppins-Light.ttf#Poppins Light" />
         </OnPlatform>
 
         <OnPlatform x:Key="TextSemiBold" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Poppins SemiBold" />
-            <On Platform="Android" Value="OldStandard-Bold.ttf#Old Standard TT" />
+            <On Platform="Android" Value="Poppins-SemiBold.ttf#Poppins SemiBold" />
         </OnPlatform>
 
         <!--  Styles  -->
