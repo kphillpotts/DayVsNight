@@ -94,8 +94,11 @@ namespace DayVsNight
                 // get the theme colors
 
                 // get the brush based on the theme
-                SKColor gradientStart = ((Color)Application.Current.Resources["GaugeGradientStartColor"]).ToSKColor();
-                SKColor gradientEnd = ((Color)Application.Current.Resources["GaugeGradientEndColor"]).ToSKColor();
+                var start = Application.Current.Resources["GaugeGradientStartColor"] as AppThemeColor;
+                SKColor gradientStart = Application.Current.RequestedTheme == OSAppTheme.Dark ? start.Dark.ToSKColor() : start.Light.ToSKColor();
+
+                var end = Application.Current.Resources["GaugeGradientEndColor"] as AppThemeColor;
+                SKColor gradientEnd = Application.Current.RequestedTheme == OSAppTheme.Dark ? end.Dark.ToSKColor() : end.Light.ToSKColor();
 
                 // gradient backround
                 backgroundBrush.Shader = SKShader.CreateLinearGradient(

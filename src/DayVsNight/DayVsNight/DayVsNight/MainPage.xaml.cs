@@ -1,4 +1,5 @@
 ﻿using DayVsNight.Themes;
+using DayVsNight.ViewModels;
 using SkiaSharp;
 using SkiaSharp.Views.Forms;
 using System;
@@ -14,6 +15,7 @@ namespace DayVsNight
     {
         public MainPage()
         {
+            BindingContext = viewModel = new MainViewModel();
             InitializeComponent();
         }
 
@@ -39,16 +41,16 @@ namespace DayVsNight
 
         private void ProfileImage_Tapped(object sender, EventArgs e)
         {
-            if (themeName == "light")
-            {
-                themeName = "dark";
-            }
-            else
-            {
-                themeName = "light";
-            }
+            //if (themeName == "light")
+            //{
+            //    themeName = "dark";
+            //}
+            //else
+            //{
+            //    themeName = "light";
+            //}
 
-            ThemeHelper.ChangeTheme(themeName);
+            //ThemeHelper.ChangeTheme(themeName);
         }
 
         // background brush
@@ -57,6 +59,7 @@ namespace DayVsNight
             Style = SKPaintStyle.Fill,
             Color = Color.Red.ToSKColor()
         };
+        private MainViewModel viewModel;
 
         private void BackgroundGradient_PaintSurface(object sender, SkiaSharp.Views.Forms.SKPaintSurfaceEventArgs e)
         {
@@ -67,9 +70,18 @@ namespace DayVsNight
             canvas.Clear();
 
             // get the brush based on the theme
-            SKColor gradientStart = ((Color)Application.Current.Resources["BackgroundGradientStartColor"]).ToSKColor();
-            SKColor gradientMid = ((Color)Application.Current.Resources["BackgroundGradientMidColor"]).ToSKColor();
-            SKColor gradientEnd = ((Color)Application.Current.Resources["BackgroundGradientEndColor"]).ToSKColor();
+            SKColor gradientStart;
+            SKColor gradientMid;
+            SKColor gradientEnd;
+
+            var start = Application.Current.Resources["BackgroundGradientStartColor"] as AppThemeColor;
+            gradientStart = Application.Current.RequestedTheme == OSAppTheme.Dark ? start.Dark.ToSKColor() : start.Light.ToSKColor();
+
+            var mid = Application.Current.Resources["BackgroundGradientMidColor"] as AppThemeColor;
+            gradientMid = Application.Current.RequestedTheme == OSAppTheme.Dark ? mid.Dark.ToSKColor() : mid.Light.ToSKColor();
+
+            var end = Application.Current.Resources["BackgroundGradientEndColor"] as AppThemeColor;
+            gradientEnd = Application.Current.RequestedTheme == OSAppTheme.Dark ? end.Dark.ToSKColor() : end.Light.ToSKColor();
 
             // gradient backround
             backgroundBrush.Shader = SKShader.CreateRadialGradient

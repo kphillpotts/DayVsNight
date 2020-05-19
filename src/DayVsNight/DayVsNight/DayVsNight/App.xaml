@@ -9,38 +9,22 @@
         <x:String x:Key="MountainImage">mountain_light</x:String>
 
         <!--  Colors  -->
-        <Color x:Key="HeaderColor">#213654</Color>
-        <Color x:Key="ArrowColor">#768ea0</Color>
-        <Color x:Key="BorderColor">#d2d7dd</Color>
-        <Color x:Key="TagColor">#ffa318</Color>
-        <Color x:Key="TabSubTextColor">#96a7dd</Color>
-        <Color x:Key="SubTextColor">#95a8b6</Color>
-        <Color x:Key="TempLabelColor">#ffffff</Color>
+        <AppThemeColor x:Key="HeaderColor" Light="#213654" Dark="#FFFFFF"/>
+        <AppThemeColor x:Key="ArrowColor" Light="#768ea0" Dark="#768ea0"/>
+        <AppThemeColor x:Key="BorderColor" Light="#d2d7dd"  Dark="#d2d7dd"/>
+        <AppThemeColor x:Key="TagColor" Light="#ffa318"  Dark="#ffa318"/>
+        <AppThemeColor x:Key="TabSubTextColor" Light="#96a7dd"  Dark="#FFFFFF"/>
+        <AppThemeColor x:Key="SubTextColor" Light="#95a8b6"  Dark="#FFFFFF"/>
+        <AppThemeColor x:Key="TempLabelColor" Light="#ffffff"  Dark="#ffffff"/>
 
         <!--  BackgroundGradients  -->
-        <Color x:Key="BackgroundGradientStartColor">#FFF1EA</Color>
-        <Color x:Key="BackgroundGradientMidColor">#D6D7E3</Color>
-        <Color x:Key="BackgroundGradientEndColor">#F0F6FF</Color>
+        <AppThemeColor x:Key="BackgroundGradientStartColor" Light="#FFF1EA" Dark="#E8D6CB"/>
+        <AppThemeColor x:Key="BackgroundGradientMidColor" Light="#D6D7E3" Dark="#6683A9" />
+        <AppThemeColor x:Key="BackgroundGradientEndColor" Light="#F0F6FF" Dark="#192E4A"/>
 
         <!--  Guage Gradients  -->
-        <Color x:Key="GaugeGradientStartColor">#99C2FF</Color>
-        <Color x:Key="GaugeGradientEndColor">#FB7D80</Color>
-
-        <!--  Fonts  -->
-        <!--<OnPlatform x:Key="TextBold" x:TypeArguments="x:String">
-            <On Platform="iOS" Value="Poppins" />
-            <On Platform="Android" Value="Poppins-Bold.ttf#Poppins" />
-        </OnPlatform>
-
-        <OnPlatform x:Key="TextLight" x:TypeArguments="x:String">
-            <On Platform="iOS" Value="Poppins Light" />
-            <On Platform="Android" Value="Poppins-Light.ttf#Poppins Light" />
-        </OnPlatform>
-
-        <OnPlatform x:Key="TextSemiBold" x:TypeArguments="x:String">
-            <On Platform="iOS" Value="Poppins SemiBold" />
-            <On Platform="Android" Value="Poppins-SemiBold.ttf#Poppins SemiBold" />
-        </OnPlatform>-->
+        <AppThemeColor x:Key="GaugeGradientStartColor" Light="#99C2FF"  Dark="#7A89B1"/>
+        <AppThemeColor x:Key="GaugeGradientEndColor" Light="#FB7D80"  Dark="#FB7D80"/>
 
         <!--  Styles  -->
         <Style x:Key="Header" TargetType="Label">

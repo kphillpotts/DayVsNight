@@ -12,6 +12,7 @@ namespace DayVsNight
     {
         public App()
         {
+            Device.SetFlags(new string[] { "AppTheme_Experimental" });
             InitializeComponent();
 
             MainPage = new MainPage();
