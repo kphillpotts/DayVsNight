@@ -70,9 +70,6 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <BundleResource Include="Resources\Poppins-Bold.ttf" />
-    <BundleResource Include="Resources\Poppins-Light.ttf" />
-    <BundleResource Include="Resources\Poppins-SemiBold.ttf" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />

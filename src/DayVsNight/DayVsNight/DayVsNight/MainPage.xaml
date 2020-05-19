@@ -101,14 +101,14 @@
             <Label Style="{StaticResource SubHeader}" Text="Temperature" />
 
             <!--  Temp Guage  -->
-            <Grid HeightRequest="170">
+            <Grid HeightRequest="200">
 
                 <local:GaugeControl />
 
                 <StackLayout Margin="20,5,0,0" InputTransparent="True">
                     <Label Style="{StaticResource TempLabel}" Text="23˚" />
                     <Label
-                        Margin="0,-15,0,0"
+                        Margin="0,-20,0,0"
                         Style="{StaticResource SubTextSemiBold}"
                         Text="CELCIUS"
                         TextColor="White" />

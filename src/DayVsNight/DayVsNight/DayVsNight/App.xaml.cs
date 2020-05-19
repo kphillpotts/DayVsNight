@@ -2,6 +2,10 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("Poppins-Bold.ttf")]
+[assembly: ExportFont("Poppins-Light.ttf")]
+[assembly: ExportFont("Poppins-SemiBold.ttf")]
+
 namespace DayVsNight
 {
     public partial class App : Application

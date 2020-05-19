@@ -5,9 +5,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <Application.Resources>
 
-        <!-- Background Image -->
+        <!--  Background Image  -->
         <x:String x:Key="MountainImage">mountain_light</x:String>
-        
+
         <!--  Colors  -->
         <Color x:Key="HeaderColor">#213654</Color>
         <Color x:Key="ArrowColor">#768ea0</Color>
@@ -16,18 +16,18 @@
         <Color x:Key="TabSubTextColor">#96a7dd</Color>
         <Color x:Key="SubTextColor">#95a8b6</Color>
         <Color x:Key="TempLabelColor">#ffffff</Color>
-        
-        <!--BackgroundGradients-->
+
+        <!--  BackgroundGradients  -->
         <Color x:Key="BackgroundGradientStartColor">#FFF1EA</Color>
         <Color x:Key="BackgroundGradientMidColor">#D6D7E3</Color>
         <Color x:Key="BackgroundGradientEndColor">#F0F6FF</Color>
-        
-        <!--Guage Gradients-->
+
+        <!--  Guage Gradients  -->
         <Color x:Key="GaugeGradientStartColor">#99C2FF</Color>
         <Color x:Key="GaugeGradientEndColor">#FB7D80</Color>
 
         <!--  Fonts  -->
-        <OnPlatform x:Key="TextBold" x:TypeArguments="x:String">
+        <!--<OnPlatform x:Key="TextBold" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Poppins" />
             <On Platform="Android" Value="Poppins-Bold.ttf#Poppins" />
         </OnPlatform>
@@ -40,60 +40,57 @@
         <OnPlatform x:Key="TextSemiBold" x:TypeArguments="x:String">
             <On Platform="iOS" Value="Poppins SemiBold" />
             <On Platform="Android" Value="Poppins-SemiBold.ttf#Poppins SemiBold" />
-        </OnPlatform>
+        </OnPlatform>-->
 
         <!--  Styles  -->
         <Style x:Key="Header" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextBold}" />
+            <Setter Property="FontFamily" Value="Poppins-Bold" />
             <Setter Property="FontSize" Value="30" />
             <Setter Property="TextColor" Value="{DynamicResource HeaderColor}" />
         </Style>
 
         <Style x:Key="SubText" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontFamily" Value="Poppins-Light" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="TextColor" Value="{DynamicResource SubTextColor}" />
         </Style>
 
         <Style x:Key="SubTextSemiBold" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextSemiBold}" />
+            <Setter Property="FontFamily" Value="Poppins-SemiBold" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="TextColor" Value="{DynamicResource SubTextColor}" />
         </Style>
 
         <Style x:Key="SubHeader" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextBold}" />
+            <Setter Property="FontFamily" Value="Poppins-Bold" />
             <Setter Property="FontSize" Value="22" />
             <Setter Property="Margin" Value="0,20,0,0" />
             <Setter Property="TextColor" Value="{DynamicResource HeaderColor}" />
         </Style>
 
         <Style x:Key="TempLabel" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextBold}" />
+            <Setter Property="FontFamily" Value="Poppins-Bold" />
             <Setter Property="FontSize" Value="38" />
             <Setter Property="TextColor" Value="{DynamicResource TempLabelColor}" />
         </Style>
 
         <Style x:Key="TagLabel" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextBold}" />
+            <Setter Property="FontFamily" Value="Poppins-Bold" />
             <Setter Property="FontSize" Value="12" />
             <Setter Property="TextColor" Value="{DynamicResource TempLabelColor}" />
         </Style>
 
         <Style x:Key="TabHeader" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextSemiBold}" />
+            <Setter Property="FontFamily" Value="Poppins-SemiBold" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="TextColor" Value="{DynamicResource TempLabelColor}" />
         </Style>
 
         <Style x:Key="TabSubText" TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource TextLight}" />
+            <Setter Property="FontFamily" Value="Poppins-Light" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="TextColor" Value="{StaticResource TabSubTextColor}" />
         </Style>
-
-
-
 
         <!--  Implicit Styles  -->
         <Style TargetType="Grid">

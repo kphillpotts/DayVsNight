@@ -11,12 +11,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Poppins-Bold.ttf" />
+    <None Remove="Fonts\Poppins-Light.ttf" />
+    <None Remove="Fonts\Poppins-SemiBold.ttf" />
     <None Remove="Images\Heat.svg" />
     <None Remove="Images\Snowflake.svg" />
     <None Remove="Images\Thumb.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Fonts\Poppins-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Poppins-Light.ttf" />
+    <EmbeddedResource Include="Fonts\Poppins-SemiBold.ttf" />
     <EmbeddedResource Include="Images\Heat.svg" />
     <EmbeddedResource Include="Images\Snowflake.svg" />
     <EmbeddedResource Include="Images\Thumb.png" />
